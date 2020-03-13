@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/calendar.css">
+</head>
+
+<body>
+    <div id="calendar-ctnr" class="calendar-ctnr">
+        <p id="calendar-title" class="title">March 2018</p>
+        <div class="row">
+            <div class="nav-ctnr left-nav">
+                <div class="arrow-ctnr" onclick="calendar.clickLeft()">
+                    <span class="arrow">«</span>
+                </div>
+            </div>
+            <div id="calendar" class="calendar">
+                <div class="row day-of-week-header">
+                    <div class="day inactive weekend">S</div>
+                    <div class="day inactive">M</div>
+                    <div class="day inactive">T</div>
+                    <div class="day inactive">W</div>
+                    <div class="day inactive">T</div>
+                    <div class="day inactive">F</div>
+                    <div class="day inactive weekend">S</div>
+                </div>
+                <div id="days-body" class="row days-body"></div>
+            </div>
+            <div class="nav-ctnr right-nav">
+                <div class="arrow-ctnr" onclick="calendar.clickRight()">
+                    <span class="arrow">»</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/index.js"></script>
+    <!-- include individual files due to CORS error on module imports -->
+    <script src="src/model/calendar.js"></script>
+</body>
+</html>
